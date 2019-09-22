@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "617978500108",
+    "firebase_url": "https://crapappdisquasting.firebaseio.com",
+    "project_id": "crapappdisquasting",
+    "storage_bucket": "crapappdisquasting.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617978500108:android:4100f6ff77a2037007ca29",
+        "android_client_info": {
+          "package_name": "com.example.android.mobilecourse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617978500108-ddlspuchujbtat7jlinurkdmh6otrr4p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.mobilecourse",
+            "certificate_hash": "6f802cc716bbe6ac003bb767512e533151839e38"
+          }
+        },
+        {
+          "client_id": "617978500108-477usounbda0pdrboch2ekfrfjslcng1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK0TAjNiQWO1ipBn4h4UBJXG_uJAdoVq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617978500108-477usounbda0pdrboch2ekfrfjslcng1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
