@@ -4,37 +4,32 @@ package com.example.android.mobilecourse;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
 import androidx.annotation.NonNull;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
 public class LoginActivity extends Activity {
-    private static final String TAG = "LoginActivity";
-    private static final int REQUEST_SIGNUP = 0;
     private FirebaseAuth mAuth;
 
     @BindView(R.id.input_email)
-    EditText _emailText;
+    EditText emailText;
     @BindView(R.id.input_password)
-    EditText _passwordText;
+    EditText passwordText;
     @BindView(R.id.btn_login)
-    Button _loginButton;
+    Button loginButton;
     @BindView(R.id.link_signup)
-    TextView _signupLink;
+    TextView signupLink;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,20 +39,16 @@ public class LoginActivity extends Activity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-
-        _loginButton.setOnClickListener(new View.OnClickListener() {
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 login();
             }
         });
-
-        _signupLink.setOnClickListener(new View.OnClickListener() {
-
+        signupLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Start the Signup activity
-                startActivity(new Intent(LoginActivity.this, SignupActivity.class));
+                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
             }
         });
     }
@@ -68,21 +59,18 @@ public class LoginActivity extends Activity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
     }
 
-    public void login() {
+    private void login() {
 
         if (!validate()) {
-            Toast.makeText(LoginActivity.this, "Please validate your email and password", Toast.LENGTH_LONG).show();
+            Toast.makeText(LoginActivity.this, getText(R.string.validate_email_password), Toast.LENGTH_LONG).show();
             onLoginFailed();
             return;
         }
 
-        _loginButton.setEnabled(false);
+        loginButton.setEnabled(false);
 
-
-        final String email = _emailText.getText().toString();
-        final String password = _passwordText.getText().toString();
-
-        // TODO: Implement your own authentication logic here.
+        String email = emailText.getText().toString();
+        String password = passwordText.getText().toString();
 
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -100,53 +88,38 @@ public class LoginActivity extends Activity {
                 });
     }
 
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_SIGNUP) {
-            if (resultCode == RESULT_OK) {
-                // By default we just finish the Activity and log them in automatically
-                this.finish();
-            }
-        }
-    }
-
-    public void onLoginSuccess() {
-        Log.d("My_tag", "signInWithEmail:success");
+    private void onLoginSuccess() {
         FirebaseUser user = mAuth.getCurrentUser();
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
-        Toast.makeText(getBaseContext(), "Oh! You are so crappy today, success", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), getText(R.string.login_success), Toast.LENGTH_LONG).show();
         finish();
-        _loginButton.setEnabled(true);
+        loginButton.setEnabled(true);
     }
 
-    public void onLoginFailed() {
-        Log.w("My_tag", "signInWithEmail:failure");
-        Toast.makeText(LoginActivity.this, "Authentication failed.",
+    private void onLoginFailed() {
+        Toast.makeText(LoginActivity.this, getText(R.string.login_failed),
                 Toast.LENGTH_SHORT).show();
-        _loginButton.setEnabled(true);
+        loginButton.setEnabled(true);
     }
 
-    public boolean validate() {
+    private boolean validate() {
         boolean valid = true;
 
-        String email = _emailText.getText().toString();
-        String password = _passwordText.getText().toString();
+        String email = emailText.getText().toString();
+        String password = passwordText.getText().toString();
 
         if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            _emailText.setError("enter a valid email address");
+            emailText.setError(getText(R.string.invalid_email));
             valid = false;
         } else {
-            _emailText.setError(null);
+            emailText.setError(null);
         }
-
         if (password.isEmpty() || password.length() < 8) {
-            _passwordText.setError("between 8+ alphanumeric characters");
+            passwordText.setError(getText(R.string.invalid_password));
             valid = false;
         } else {
-            _passwordText.setError(null);
+            passwordText.setError(null);
         }
-
         return valid;
     }
 }
