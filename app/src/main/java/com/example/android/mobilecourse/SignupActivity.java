@@ -64,7 +64,7 @@ public class SignUpActivity extends Activity {
         }
     }
 
-    private void signup() {
+    public void signup() {
         if (!validate()) {
             onSignupFailed();
             return;

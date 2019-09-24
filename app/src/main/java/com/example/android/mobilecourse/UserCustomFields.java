@@ -7,6 +7,9 @@ public class UserCustomFields {
     public String email;
     public String phone;
 
+    public UserCustomFields(){
+
+    }
     public UserCustomFields(String name,String email, String phone) {
         this.name = name;
         this.email = email;

@@ -59,7 +59,7 @@ public class LoginActivity extends Activity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
     }
 
-    private void login() {
+    public void login() {
 
         if (!validate()) {
             Toast.makeText(LoginActivity.this, getText(R.string.validate_email_password), Toast.LENGTH_LONG).show();
@@ -79,6 +79,7 @@ public class LoginActivity extends Activity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             onLoginSuccess();
+                            finish();
                         } else {
                             // If sign in fails, display a message to the user.
                             onLoginFailed();
