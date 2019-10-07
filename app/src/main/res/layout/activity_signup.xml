@@ -25,6 +25,7 @@
 
         <!--  Name Label -->
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_name_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -38,6 +39,7 @@
 
         <!-- Email Label -->
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_email_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -51,6 +53,7 @@
 
         <!-- phone Label -->
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_phone_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -64,6 +67,7 @@
 
         <!-- Password Label -->
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_password_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -92,6 +96,5 @@
             android:text="Already a member? Login"
             android:gravity="center"
             android:textSize="16dip"/>
-
     </LinearLayout>
 </ScrollView>

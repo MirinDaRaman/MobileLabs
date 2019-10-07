@@ -11,31 +11,32 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import androidx.annotation.NonNull;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 
 public class LoginActivity extends Activity {
     private FirebaseAuth mAuth;
-
-    @BindView(R.id.input_email)
-    EditText emailText;
-    @BindView(R.id.input_password)
-    EditText passwordText;
-    @BindView(R.id.btn_login)
-    Button loginButton;
-    @BindView(R.id.link_signup)
-    TextView signupLink;
+    private TextInputLayout inputEmailContainer;
+    private EditText emailText;
+    private EditText passwordText;
+    private TextInputLayout inputPasswordContainer;
+    private Button loginButton;
+    private TextView signupLink;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
+
+        inputEmailContainer = findViewById(R.id.input_email_container);
+        emailText = findViewById(R.id.input_email);
+        passwordText = findViewById(R.id.input_password);
+        inputPasswordContainer = findViewById(R.id.input_password_container);
+        loginButton = findViewById(R.id.btn_login);
+        signupLink= findViewById(R.id.link_signup);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -60,7 +61,6 @@ public class LoginActivity extends Activity {
     }
 
     public void login() {
-
         if (!validate()) {
             Toast.makeText(LoginActivity.this, getText(R.string.validate_email_password), Toast.LENGTH_LONG).show();
             onLoginFailed();
@@ -103,23 +103,23 @@ public class LoginActivity extends Activity {
         loginButton.setEnabled(true);
     }
 
+
     private boolean validate() {
         boolean valid = true;
-
-        String email = emailText.getText().toString();
         String password = passwordText.getText().toString();
+        String email = emailText.getText().toString();
 
-        if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            emailText.setError(getText(R.string.invalid_email));
-            valid = false;
-        } else {
-            emailText.setError(null);
-        }
         if (password.isEmpty() || password.length() < 8) {
-            passwordText.setError(getText(R.string.invalid_password));
+            inputPasswordContainer.setError(getText(R.string.invalid_password));
             valid = false;
         } else {
             passwordText.setError(null);
+        }
+        if (email.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            inputEmailContainer.setError(getText(R.string.invalid_email));
+            valid = false;
+        } else {
+            emailText.setError(null);
         }
         return valid;
     }

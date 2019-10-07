@@ -22,7 +22,9 @@
             android:src="@drawable/logo" />
 
         <!-- Email Label -->
+
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_email_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -36,6 +38,7 @@
 
         <!-- Password Label -->
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_password_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
