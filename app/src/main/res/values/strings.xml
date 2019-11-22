@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MobileCourse</string>
+    <!-- Strings related to login -->
+    <string name="invalid_name">At least 3 characters</string>
+    <string name="invalid_phone">Enter a valid phone number</string>
+    <string name="invalid_password">Between 8+ alphanumeric characters</string>
+    <string name="invalid_email">Enter a valid email address</string>
+    <string name="validate_email_password">Please validate your email and password</string>
+    <string name="login_success">Oh! You are so crappy today, success</string>
+    <string name="login_failed">Authentication failed.</string>
+    <string name="DB_read_failed">The read failed: </string>
+    <string name="Welcome">Welcome \u0020</string>
+    <string name="registration_success">Registration success</string>
+    <string name="database_failure">registration failed in database</string>
+    <string name="registration_failed">Registration failed</string>
+</resources>
