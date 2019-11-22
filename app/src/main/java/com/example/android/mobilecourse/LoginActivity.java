@@ -80,6 +80,7 @@ public class LoginActivity extends Activity {
                             // Sign in success, update UI with the signed-in user's information
                             onLoginSuccess();
                             finish();
+
                         } else {
                             // If sign in fails, display a message to the user.
                             onLoginFailed();
