@@ -33,5 +33,4 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
     public int getItemCount() {
         return movieList.size();
     }
-
 }

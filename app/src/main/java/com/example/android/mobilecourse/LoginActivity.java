@@ -48,7 +48,6 @@ public class LoginActivity extends Activity {
             finish();
         }
 
-
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,8 +65,6 @@ public class LoginActivity extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-
-
     }
 
     public void login() {

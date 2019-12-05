@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">617978500108-477usounbda0pdrboch2ekfrfjslcng1.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://crapappdisquasting.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">617978500108</string>
+    <string name="google_api_key" translatable="false">AIzaSyDK0TAjNiQWO1ipBn4h4UBJXG_uJAdoVq0</string>
+    <string name="google_app_id" translatable="false">1:617978500108:android:4100f6ff77a2037007ca29</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDK0TAjNiQWO1ipBn4h4UBJXG_uJAdoVq0</string>
+    <string name="google_storage_bucket" translatable="false">crapappdisquasting.appspot.com</string>
+    <string name="project_id" translatable="false">crapappdisquasting</string>
+</resources>
