@@ -1,6 +1,5 @@
 package com.example.android.mobilecourse;
 
-
 public class Movie {
 
     private String title;

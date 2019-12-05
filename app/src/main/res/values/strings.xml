@@ -14,4 +14,7 @@
     <string name="database_failure">registration failed in database</string>
     <string name="registration_failed">Registration failed</string>
     <string name="failed">Sorry, failed</string>
+    <string name="no_connection">"No Internet Connection"</string>
+
+
 </resources>

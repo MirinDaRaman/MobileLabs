@@ -18,18 +18,18 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
 
     public void onReceive(Context context, Intent intent) {
         if (!isOnline(context)) {
-            Snackbar.make(view, "No Internet Connection", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(view, R.string.no_connection, Snackbar.LENGTH_LONG).show();
         }
     }
 
     private boolean isOnline(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        if (cm == null) {
+        if (connectivityManager == null) {
             return false;
         }
 
-        NetworkCapabilities capabilities = cm.getNetworkCapabilities(cm.getActiveNetwork());
+        NetworkCapabilities capabilities = connectivityManager.getNetworkCapabilities(connectivityManager.getActiveNetwork());
         return capabilities != null &&
                 (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) ||
                         capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI));

@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private SwipeRefreshLayout swipeRefreshLayout;
     private LinearLayout linearLayout;
+    public static final IntentFilter INTENT_FILTER = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +46,11 @@ public class MainActivity extends AppCompatActivity {
         final MovieApi apiService = getApplicationEx().getMovieService();
         final Call<List<Movie>> call = apiService.getAllMovies();
 
-
         call.enqueue(new Callback<List<Movie>>() {
             @Override
             public void onResponse(final Call<List<Movie>> call,
                                    final Response<List<Movie>> response) {
-                adapter = new CustomAdapter(response.body());
-                recyclerView.setAdapter(adapter);
-                swipeRefreshLayout.setRefreshing(false);
+                setAdapter(response);
             }
 
             @Override
@@ -62,23 +60,25 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void setAdapter(Response<List<Movie>> response) {
+        adapter = new CustomAdapter(response.body());
+        recyclerView.setAdapter(adapter);
+        swipeRefreshLayout.setRefreshing(false);
+    }
+
     private void setupSwipeToRefresh() {
         swipeRefreshLayout.setOnRefreshListener(
-                new SwipeRefreshLayout.OnRefreshListener() {
-                    @Override
-                    public void onRefresh() {
-                        loadMovies();
-                        swipeRefreshLayout.setRefreshing(false);
-                    }
+                () -> {
+                    loadMovies();
+                    swipeRefreshLayout.setRefreshing(false);
                 }
         );
         swipeRefreshLayout.setColorSchemeResources(R.color.primary_darker);
     }
 
     private void registerNetworkMonitoring() {
-        IntentFilter filter = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
         NetworkChangeReceiver receiver = new NetworkChangeReceiver(linearLayout);
-        this.registerReceiver(receiver, filter);
+        this.registerReceiver(receiver, INTENT_FILTER);
     }
 
     private App getApplicationEx() {

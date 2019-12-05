@@ -40,6 +40,15 @@ public class LoginActivity extends Activity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Toast.makeText(this, getText(R.string.login_success), Toast.LENGTH_LONG).show();
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+        }
+
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +66,8 @@ public class LoginActivity extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+
     }
 
     public void login() {
@@ -79,13 +89,10 @@ public class LoginActivity extends Activity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             onLoginSuccess();
-                            finish();
-
                         } else {
                             // If sign in fails, display a message to the user.
                             onLoginFailed();
                         }
-
                     }
                 });
     }
