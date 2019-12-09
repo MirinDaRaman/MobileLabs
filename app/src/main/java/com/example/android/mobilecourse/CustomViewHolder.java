@@ -13,7 +13,6 @@ class CustomViewHolder extends RecyclerView.ViewHolder {
 
    CustomViewHolder(final View itemView) {
        super(itemView);
-
        textDesctiption = itemView.findViewById(R.id.custom_desctription);
        poster = itemView.findViewById(R.id.custom_imageView);
        textTitle = itemView.findViewById(R.id.custom_title);

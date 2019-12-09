@@ -10,10 +10,24 @@ import androidx.recyclerview.widget.RecyclerView;
 public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
 
     private List<Movie> movieList;
+    private static OnItemListener mOnItemListener;
+
+    public interface OnItemListener {
+        void onItemClick(int position);
+    }
 
     CustomAdapter(List<Movie> movieList) {
         this.movieList = movieList;
     }
+
+    List<Movie> getMovieList() {
+        return movieList;
+    }
+
+    public static void setOnItemListener(OnItemListener listener) {
+        CustomAdapter.mOnItemListener = listener;
+    }
+
 
     @NonNull
     @Override

@@ -18,13 +18,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
 import androidx.annotation.NonNull;
 
 public class SignUpActivity extends Activity {
     private FirebaseAuth mAuth;
     DatabaseReference databaseUsers;
-
     private EditText emailText;
     private TextInputLayout nameTextContainer;
     private TextInputLayout inputEmailContainer;
@@ -54,18 +52,10 @@ public class SignUpActivity extends Activity {
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
         databaseUsers = FirebaseDatabase.getInstance().getReference("Users");
-        signupButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signup();
-            }
-        });
-       loginLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               // Finish the registration screen and return to the Login activity
-                finish();
-            }
+        signupButton.setOnClickListener(v -> signup());
+        loginLink.setOnClickListener(v -> {
+            // Finish the registration screen and return to the Login activity
+            finish();
         });
     }
 
@@ -82,23 +72,20 @@ public class SignUpActivity extends Activity {
         String phone = phoneNumber.getText().toString();
 
         mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success
-                            UserCustomFields UserCustomFields = new UserCustomFields(email, phone);
-                            FirebaseDatabase.getInstance().getReference("Users")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(UserCustomFields).addOnCompleteListener(task1 -> {
-                                signupButton.setEnabled(true);
-                                addUsername(name);
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        // Sign in success
+                        UserCustomFields UserCustomFields = new UserCustomFields(phone, email);
+                        FirebaseDatabase.getInstance().getReference("Users")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .setValue(UserCustomFields).addOnCompleteListener(task1 -> {
+                            signupButton.setEnabled(true);
+                            addUsername(name);
 
-                                    });
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            onSignupFailed();
-                        }
+                        });
+                    } else {
+                        // If sign in fails, display a message to the user.
+                        onSignupFailed();
                     }
                 });
     }
@@ -108,18 +95,14 @@ public class SignUpActivity extends Activity {
         UserProfileChangeRequest userUpdateProfile = new UserProfileChangeRequest
                 .Builder().setDisplayName(userName).build();
         userProfile.updateProfile(userUpdateProfile)
-        .addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task1) {
-                if(task1.isSuccessful()){
-                    Toast.makeText(getBaseContext(), getString(R.string.registration_success), Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(SignUpActivity.this, MainActivity.class));
-                    finish();
-                }else {
-                    Toast.makeText(getBaseContext(),getString(R.string.database_failure), Toast.LENGTH_LONG).show();
-                }
-            }
-
+                .addOnCompleteListener(task1 -> {
+                    if (task1.isSuccessful()) {
+                        Toast.makeText(getBaseContext(), getString(R.string.registration_success), Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(SignUpActivity.this, MainActivity.class));
+                        finish();
+                    } else {
+                        Toast.makeText(getBaseContext(), getString(R.string.database_failure), Toast.LENGTH_LONG).show();
+                    }
         });
     }
 
