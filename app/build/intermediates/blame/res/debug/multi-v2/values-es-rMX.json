@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\user-pc\\Desktop\\MobileLabs\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rMX\\values-es-rMX.xml",
+            "outputFile": "C:\\Users\\user-pc\\MobileCourse\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rMX\\values-es-rMX.xml",
             "map": [
                 {
                     "source": "C:\\Users\\user-pc\\.gradle\\caches\\transforms-2\\files-2.1\\68065632f8eb1c4ac037f719d17c2506\\jetified-firebase-ui-auth-4.0.0\\res\\values-es-rMX\\values-es-rMX.xml",

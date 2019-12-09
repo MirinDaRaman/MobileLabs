@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:2:1-34:12
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:2:1-34:12
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\68065632f8eb1c4ac037f719d17c2506\jetified-firebase-ui-auth-4.0.0\AndroidManifest.xml:2:1-93:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\314e78ee411997f535ea385b0dca3a47\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.4.2] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\cc43f2f075235ed31c5e5933ac0e0190\jetified-library-1.4.2\AndroidManifest.xml:6:1-16:12
@@ -12,6 +12,7 @@ MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\user-pc\.gra
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\52881a419dc1ce9a2c4c5412ae90c679\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\88d46ce597d410c8d9a1addcd2777129\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\2aef63a5797781084d68e618eab6d6cc\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
+MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:15:1-39:12
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\a4cb7e619397e7c6c68b1e9fcdedb827\browser-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\17b125378fc55b264e31eccaff8fa6ca\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-core:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\67a720e67e69b822888051f5b4f7b65e\firebase-core-17.2.1\AndroidManifest.xml:2:1-9:12
@@ -71,43 +72,45 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\user-pc\.gra
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\aaebdf12f89ffa22d526c59842f63ce2\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\7486e7b29120c3ce52d033d841b80346\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\8e5501d68d01dce42031dc1b525c12ab\firebase-database-collection-17.0.0\AndroidManifest.xml:2:1-7:12
-INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:2:1-34:12
-INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:2:1-34:12
 	package
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:4:5-47
-		INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:4:5-47
+		INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:2:1-34:12
-		INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:2:1-34:12
+		INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:2:1-34:12
-		INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:2:1-34:12
+		INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:6:5-71
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:6:5-71
 	android:name
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:6:22-68
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:6:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:7:5-71
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:7:5-71
 	android:name
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:7:22-68
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:7:22-68
 uses-permission#android.permission.READ_CONTACTS
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:8:5-72
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:8:5-72
 	android:name
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:8:22-69
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:8:22-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:9:5-67
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:9:5-67
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\68065632f8eb1c4ac037f719d17c2506\jetified-firebase-ui-auth-4.0.0\AndroidManifest.xml:13:5-67
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\68065632f8eb1c4ac037f719d17c2506\jetified-firebase-ui-auth-4.0.0\AndroidManifest.xml:13:5-67
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\11eea3596166b118c0fb2c94b1c6ff94\firebase-database-19.2.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\11eea3596166b118c0fb2c94b1c6ff94\firebase-database-19.2.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:27:5-67
 MERGED from [com.google.android.gms:play-services-measurement:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\440194db52e743b9bb6ca4a0f89c1080\play-services-measurement-17.2.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\440194db52e743b9bb6ca4a0f89c1080\play-services-measurement-17.2.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\d5af08c18eb6a1f79eb2ad8b2ed5e1e8\play-services-measurement-api-17.2.1\AndroidManifest.xml:22:5-67
@@ -119,13 +122,15 @@ MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\user-pc\.gradle\c
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\619967fdb4813f8fe3567cf7ff5fed79\play-services-measurement-sdk-api-17.2.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\619967fdb4813f8fe3567cf7ff5fed79\play-services-measurement-sdk-api-17.2.1\AndroidManifest.xml:23:5-67
 	android:name
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:9:22-64
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:9:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:10:5-79
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:10:5-79
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\68065632f8eb1c4ac037f719d17c2506\jetified-firebase-ui-auth-4.0.0\AndroidManifest.xml:12:5-79
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\68065632f8eb1c4ac037f719d17c2506\jetified-firebase-ui-auth-4.0.0\AndroidManifest.xml:12:5-79
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\11eea3596166b118c0fb2c94b1c6ff94\firebase-database-19.2.0\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\11eea3596166b118c0fb2c94b1c6ff94\firebase-database-19.2.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:26:5-79
 MERGED from [com.google.android.gms:play-services-measurement:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\440194db52e743b9bb6ca4a0f89c1080\play-services-measurement-17.2.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\440194db52e743b9bb6ca4a0f89c1080\play-services-measurement-17.2.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\d5af08c18eb6a1f79eb2ad8b2ed5e1e8\play-services-measurement-api-17.2.1\AndroidManifest.xml:23:5-79
@@ -137,9 +142,9 @@ MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\user-pc\.gradle\c
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\619967fdb4813f8fe3567cf7ff5fed79\play-services-measurement-sdk-api-17.2.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\619967fdb4813f8fe3567cf7ff5fed79\play-services-measurement-sdk-api-17.2.1\AndroidManifest.xml:24:5-79
 	android:name
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:10:22-76
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:10:22-76
 application
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:12:5-32:19
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:12:5-32:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\68065632f8eb1c4ac037f719d17c2506\jetified-firebase-ui-auth-4.0.0\AndroidManifest.xml:15:5-91:19
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\68065632f8eb1c4ac037f719d17c2506\jetified-firebase-ui-auth-4.0.0\AndroidManifest.xml:15:5-91:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\314e78ee411997f535ea385b0dca3a47\material-1.0.0\AndroidManifest.xml:22:5-20
@@ -148,6 +153,8 @@ MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\user-pc\.gra
 MERGED from [com.google.firebase:firebase-database:19.2.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\11eea3596166b118c0fb2c94b1c6ff94\firebase-database-19.2.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\2aef63a5797781084d68e618eab6d6cc\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\2aef63a5797781084d68e618eab6d6cc\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.firebase:firebase-core:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\67a720e67e69b822888051f5b4f7b65e\firebase-core-17.2.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-core:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\67a720e67e69b822888051f5b4f7b65e\firebase-core-17.2.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\57e50d95df64dc852ca51697e8cd706d\firebase-analytics-17.2.1\AndroidManifest.xml:7:5-20
@@ -199,51 +206,51 @@ MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\user-pc\
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\0136ca65841c199e13145e51c5d77d51\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:16:9-32
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:16:9-32
 	android:icon
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:14:9-41
 	android:allowBackup
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:17:9-40
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:17:9-40
 	android:logo
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:15:9-41
 	android:name
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:18:9-28
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:18:9-28
 activity#com.example.android.mobilecourse.MainActivity
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:19:9-23:20
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:19:9-23:20
 	android:label
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:21:13-36
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:21:13-36
 	android:theme
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:22:13-49
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:22:13-49
 	android:name
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:20:13-41
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:20:13-41
 activity#com.example.android.mobilecourse.LoginActivity
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:24:9-30:20
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:24:9-30:20
 	android:theme
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:24:49-85
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:24:49-85
 	android:name
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:24:19-48
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:24:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:25:9-29:27
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:25:9-29:27
 action#android.intent.action.MAIN
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:26:14-66
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:26:14-66
 	android:name
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:26:22-63
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:26:22-63
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:28:14-74
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:28:14-74
 	android:name
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:28:24-71
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:28:24-71
 activity#com.example.android.mobilecourse.SignUpActivity
-ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:31:9-89
+ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:31:9-89
 	android:theme
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:31:50-86
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:31:50-86
 	android:name
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml:31:19-49
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml:31:19-49
 uses-sdk
-INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\68065632f8eb1c4ac037f719d17c2506\jetified-firebase-ui-auth-4.0.0\AndroidManifest.xml:8:5-10:41
 MERGED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\68065632f8eb1c4ac037f719d17c2506\jetified-firebase-ui-auth-4.0.0\AndroidManifest.xml:8:5-10:41
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\314e78ee411997f535ea385b0dca3a47\material-1.0.0\AndroidManifest.xml:20:5-44
@@ -260,6 +267,8 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\user-pc\.gradle\caches\t
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\88d46ce597d410c8d9a1addcd2777129\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\2aef63a5797781084d68e618eab6d6cc\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\2aef63a5797781084d68e618eab6d6cc\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\a4cb7e619397e7c6c68b1e9fcdedb827\browser-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.browser:browser:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\a4cb7e619397e7c6c68b1e9fcdedb827\browser-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\17b125378fc55b264e31eccaff8fa6ca\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
@@ -378,16 +387,16 @@ MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\user-pc\
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\7486e7b29120c3ce52d033d841b80346\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\8e5501d68d01dce42031dc1b525c12ab\firebase-database-collection-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\8e5501d68d01dce42031dc1b525c12ab\firebase-database-collection-17.0.0\AndroidManifest.xml:5:5-44
-INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\user-pc\Desktop\MobileLabs\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\user-pc\MobileCourse\app\src\main\AndroidManifest.xml
 meta-data#com.google.android.gms.version
 ADDED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\68065632f8eb1c4ac037f719d17c2506\jetified-firebase-ui-auth-4.0.0\AndroidManifest.xml:16:9-18:69
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\ef19afb12e9a3936bc35dcf1b26783b9\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
@@ -538,6 +547,8 @@ ADDED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\cach
 		ADDED from [com.firebaseui:firebase-ui-auth:4.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\68065632f8eb1c4ac037f719d17c2506\jetified-firebase-ui-auth-4.0.0\AndroidManifest.xml:87:13-79
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-database:19.2.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\11eea3596166b118c0fb2c94b1c6ff94\firebase-database-19.2.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:30:9-36:19
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\d5af08c18eb6a1f79eb2ad8b2ed5e1e8\play-services-measurement-api-17.2.1\AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\d5af08c18eb6a1f79eb2ad8b2ed5e1e8\play-services-measurement-api-17.2.1\AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\957b0793de52737dcb2d552fb13bbbac\firebase-iid-19.0.0\AndroidManifest.xml:29:9-35:19
@@ -568,6 +579,12 @@ ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\user-pc\.gradle\cache
 		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\2aef63a5797781084d68e618eab6d6cc\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 	android:name
 		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\2aef63a5797781084d68e618eab6d6cc\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:19.1.0] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\6c87399fcf3120a8a0bfb4ff97b89a69\firebase-storage-19.1.0\AndroidManifest.xml:34:17-107
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-measurement:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\440194db52e743b9bb6ca4a0f89c1080\play-services-measurement-17.2.1\AndroidManifest.xml:25:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:17.2.1] C:\Users\user-pc\.gradle\caches\transforms-2\files-2.1\d5af08c18eb6a1f79eb2ad8b2ed5e1e8\play-services-measurement-api-17.2.1\AndroidManifest.xml:24:5-68
