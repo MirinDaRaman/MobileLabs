@@ -1,11 +1,9 @@
 package com.example.android.mobilecourse;
+
 import android.app.Application;
-
 import com.google.firebase.auth.FirebaseAuth;
-
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
 public class App extends Application {
 
     private MovieApi movieService;

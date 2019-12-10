@@ -1,6 +1,5 @@
 package com.example.android.mobilecourse;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,7 +37,6 @@ public class LoginActivity extends Activity {
         loginButton = findViewById(R.id.btn_login);
         signupLink= findViewById(R.id.link_signup);
 
-        // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -47,7 +45,6 @@ public class LoginActivity extends Activity {
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
             finish();
         }
-
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,8 +63,6 @@ public class LoginActivity extends Activity {
     @Override
     public void onStart() {
         super.onStart();
-
-
     }
 
     public void login() {
@@ -110,7 +105,6 @@ public class LoginActivity extends Activity {
                 Toast.LENGTH_SHORT).show();
         loginButton.setEnabled(true);
     }
-
 
     private boolean validate() {
         boolean valid = true;
