@@ -8,8 +8,8 @@ public class PageAdapter extends FragmentPagerAdapter {
 
     private int numOfTabs;
 
-    PageAdapter(FragmentManager fm, int numOfTabs) {
-        super(fm);
+    PageAdapter(FragmentManager fragmentManager, int numOfTabs) {
+        super(fragmentManager);
         this.numOfTabs = numOfTabs;
     }
 
@@ -31,5 +31,4 @@ public class PageAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return numOfTabs;
     }
-
 }

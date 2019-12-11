@@ -7,9 +7,7 @@ import androidx.fragment.app.Fragment;
 
     public class Tab2Fragment extends Fragment {
 
-        public Tab2Fragment() {
-            // Required empty public constructor
-        }
+        public Tab2Fragment() {}
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,

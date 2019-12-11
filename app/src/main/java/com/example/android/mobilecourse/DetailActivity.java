@@ -20,6 +20,10 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        detailsInit();
+    }
+
+    private void detailsInit() {
         Intent intent = getIntent();
         String imageUrl = intent.getStringExtra(EXTRA_URL);
         String title = intent.getStringExtra(EXTRA_TITTLE);

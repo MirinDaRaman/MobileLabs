@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MobileCourse</string>
+    <string name="app_name">MyTopFilms</string>
     <!-- Strings related to login -->
     <string name="invalid_name">At least 3 characters</string>
     <string name="invalid_phone">Enter a valid phone number</string>

@@ -32,6 +32,7 @@ import static android.widget.Toast.makeText;
 
 public class ProfileFragment extends Fragment {
 
+    public static final String IMAGE_FOLDER = "ImageFolder";
     private FirebaseAuth auth;
     private FirebaseUser user;
     private ImageView profilePicture;
@@ -68,8 +69,7 @@ public class ProfileFragment extends Fragment {
         if (user != null) {
             setUserData();
             buttonClickListenersInit();
-        }
-        else {
+        } else {
             makeText(getActivity(),getString(R.string.failure), LENGTH_SHORT).show();
         }
     }
@@ -78,7 +78,7 @@ public class ProfileFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 1 && resultCode == RESULT_OK){
+        if (requestCode == 1){
             Uri ImageData = Objects.requireNonNull(data).getData();
             ImageName.putFile(Objects.requireNonNull(ImageData))
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -99,17 +99,37 @@ public class ProfileFragment extends Fragment {
     }
 
     private void buttonClickListenersInit() {
-        usernameSaveBtn.setOnClickListener(new View.OnClickListener() {
+        userNameUpdate();
+
+        userEmailUpdate();
+
+        signOutButton();
+
+        userPictureUpdate();
+    }
+
+    private void userPictureUpdate() {
+        pictureBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String newUsername = Objects.requireNonNull(newUsernameInputEditText.getText())
-                        .toString().trim();
-                if (isNewUsernameValid(newUsername)){
-                    editUsername(user, newUsername);
-                }
+                loadUserAvatar();
             }
         });
+    }
 
+    private void signOutButton() {
+        signOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                auth.signOut();
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
+                Objects.requireNonNull(getActivity()).overridePendingTransition(0, 0);
+            }
+        });
+    }
+
+    private void userEmailUpdate() {
         emailSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -120,21 +140,17 @@ public class ProfileFragment extends Fragment {
                 }
             }
         });
+    }
 
-        signOutBtn.setOnClickListener(new View.OnClickListener() {
+    private void userNameUpdate() {
+        usernameSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                auth.signOut();
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                startActivity(intent);
-                Objects.requireNonNull(getActivity()).overridePendingTransition(0, 0);
-            }
-        });
-
-        pictureBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loadUserAvatar();
+                String newUsername = Objects.requireNonNull(newUsernameInputEditText.getText())
+                        .toString().trim();
+                if (isNewUsernameValid(newUsername)){
+                    editUsername(user, newUsername);
+                }
             }
         });
     }
@@ -160,8 +176,7 @@ public class ProfileFragment extends Fragment {
             if (task.isSuccessful()) {
                 emailTextView.setText(user.getEmail());
                 makeText(getActivity(), R.string.email_update_s, LENGTH_SHORT).show();
-            }
-            else {
+            } else {
                 makeText(getActivity(), R.string.email_update_fail, LENGTH_SHORT).show();
             }
         });
@@ -218,7 +233,7 @@ public class ProfileFragment extends Fragment {
         signOutBtn = profileFragment.findViewById(R.id.fragment_profile_sign_out_btn);
         usernameTextView = profileFragment.findViewById(R.id.fragment_profile_username_view);
         emailTextView = profileFragment.findViewById(R.id.fragment_profile_email_view);
-        Folder = FirebaseStorage.getInstance().getReference().child("ImageFolder");
+        Folder = FirebaseStorage.getInstance().getReference().child(IMAGE_FOLDER);
     }
 
     private App getApplicationEx(){

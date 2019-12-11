@@ -85,7 +85,7 @@ public class SignUpActivity extends Activity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success
-                            UserCustomFields UserCustomFields = new UserCustomFields(phone,email);
+                            UserCustomFields UserCustomFields = new UserCustomFields(phone, email);
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(UserCustomFields).addOnCompleteListener(task1 -> {

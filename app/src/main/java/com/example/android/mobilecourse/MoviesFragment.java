@@ -28,37 +28,38 @@ public class MoviesFragment extends Fragment implements CustomAdapter.OnItemList
     public static final String EXTRA_TITTLE = "title";
     public static final String EXTRA_DESCRIPTION = "description";
     public static final String EXTRA_YEAR = "year";
+    public static final String ANDROID_NET_CONN_CONNECTIVITY_CHANGE = "android.net.conn.CONNECTIVITY_CHANGE";
     private CustomAdapter adapter;
     private RecyclerView recyclerView;
     private SwipeRefreshLayout swipeRefreshLayout;
     private LinearLayout linearLayout;
-    private View movieFragment;
+    private View movieView;
 
     public MoviesFragment() {}
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        movieFragment = inflater.inflate(R.layout.fragment_movies, container, false);
+                             Bundle savedInstanceState){
+        movieView = inflater.inflate(R.layout.fragment_movies, container, false);
 
         initViews();
         loadMovies();
         registerNetworkMonitoring();
 
-        return movieFragment;
+        return movieView;
     }
 
     private void initViews() {
-        recyclerView = movieFragment.findViewById(R.id.welcome_recycler_view);
+        recyclerView = movieView.findViewById(R.id.welcome_recycler_view);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        linearLayout = movieFragment.findViewById(R.id.movie_fr_linearLayout);
-        swipeRefreshLayout = movieFragment.findViewById(R.id.welcome_swipe_refresh);
+        linearLayout = movieView.findViewById(R.id.movie_fr_linearLayout);
+        swipeRefreshLayout = movieView.findViewById(R.id.welcome_swipe_refresh);
         setupSwipeToRefresh();
     }
 
-    private void loadMovies(){
+    private void loadMovies() {
         swipeRefreshLayout.setRefreshing(true);
         final MovieApi apiService = getApplicationEx().getMovieService();
         final Call<List<Movie>> call = apiService.getAllMovies();
@@ -68,40 +69,41 @@ public class MoviesFragment extends Fragment implements CustomAdapter.OnItemList
             @Override
             public void onResponse(final Call<List<Movie>> call,
                                    final Response<List<Movie>> response) {
-                adapter = new CustomAdapter(response.body());
-                recyclerView.setAdapter(adapter);
-                CustomAdapter.setOnItemListener(fragment);
-                adapter.notifyDataSetChanged();
-                swipeRefreshLayout.setRefreshing(false);
+                OnResponseFilmBody(response, fragment);
             }
 
             @Override
-            public void onFailure(Call<List<Movie>> call, Throwable t) {
+            public void onFailure(Call<List<Movie>> call, Throwable t){
                 Snackbar.make(linearLayout, R.string.failure, Snackbar.LENGTH_LONG).show();
             }
         });
     }
 
-    private void setupSwipeToRefresh(){
+    private void OnResponseFilmBody(Response<List<Movie>> response, CustomAdapter.OnItemListener fragment) {
+        adapter = new CustomAdapter(response.body());
+        recyclerView.setAdapter(adapter);
+        CustomAdapter.setOnItemListener(fragment);
+        adapter.notifyDataSetChanged();
+        swipeRefreshLayout.setRefreshing(false);
+    }
+
+    private void setupSwipeToRefresh() {
         swipeRefreshLayout.setOnRefreshListener(
-                new SwipeRefreshLayout.OnRefreshListener() {
-                    @Override
-                    public void onRefresh() {
-                        loadMovies();
-                        swipeRefreshLayout.setRefreshing(false);
-                    }
+                () -> {
+                    loadMovies();
+                    swipeRefreshLayout.setRefreshing(false);
                 }
         );
         swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary);
     }
 
     private void registerNetworkMonitoring() {
-        IntentFilter filter = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
+        IntentFilter filter = new IntentFilter(ANDROID_NET_CONN_CONNECTIVITY_CHANGE);
         NetworkChangeReceiver receiver = new NetworkChangeReceiver(linearLayout);
         getActivity().registerReceiver(receiver, filter);
     }
 
-    private App getApplicationEx(){
+    private App getApplicationEx() {
         return ((App) Objects.requireNonNull(getActivity()).getApplication());
     }
 

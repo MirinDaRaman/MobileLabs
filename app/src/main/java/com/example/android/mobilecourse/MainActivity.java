@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         initTabFragments();
     }
 
-    public void initTabFragments(){
+    public void initTabFragments() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(getResources().getString(R.string.app_name));
         TabLayout tabLayout = findViewById(R.id.tabLayout);

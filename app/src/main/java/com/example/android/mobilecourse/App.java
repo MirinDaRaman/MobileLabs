@@ -10,8 +10,7 @@ public class App extends Application {
     private FirebaseAuth auth;
 
     @Override
-    public void onCreate()
-    {
+    public void onCreate() {
         super.onCreate();
         auth = FirebaseAuth.getInstance();
         movieService = createMovieApiService();
