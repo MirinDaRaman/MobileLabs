@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MobileCourse</string>
+    <string name="app_name">MyTopFilms</string>
     <!-- Strings related to login -->
     <string name="invalid_name">At least 3 characters</string>
     <string name="invalid_phone">Enter a valid phone number</string>
@@ -15,6 +15,23 @@
     <string name="registration_failed">Registration failed</string>
     <string name="failed">Sorry, failed</string>
     <string name="no_connection">"No Internet Connection"</string>
+    <string name="user_avatar">user_avatar</string>
+    <string name="load_button">load_button</string>
+    <string name="new_username">new_username</string>
+    <string name="edit_button">edit_button</string>
+    <string name="new_email">new_email</string>
+    <string name="sign_out_btn">sign_out_btn</string>
+    <string name="failure">failed</string>
+    <string name="img_load_succes">Well done! Image loaded</string>
+    <string name="email_update_s">Well done! Email is updated</string>
+    <string name="email_update_fail">Fuck! Email is not updated ^(</string>
+    <string name="invalid_new_email">email is bad)</string>
+    <string name="user_name_update_success">Well done! Name updated</string>
+    <string name="user_name_update_fail">Fuck! Name is not updated</string>
+    <string name="movies">Movies</string>
+    <string name="tab2">Tab2</string>
+    <string name="profile">Profile</string>
+    <string name="icon_2">Icon</string>
 
 
 </resources>

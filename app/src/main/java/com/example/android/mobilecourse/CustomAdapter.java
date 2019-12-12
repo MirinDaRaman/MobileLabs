@@ -7,17 +7,30 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
+public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder>{
 
     private List<Movie> movieList;
+    private static OnItemListener mOnItemListener;
+
+    public interface OnItemListener {
+        void onItemClick(int position);
+    }
 
     CustomAdapter(List<Movie> movieList) {
         this.movieList = movieList;
     }
 
+    List<Movie> getMovieList() {
+        return movieList;
+    }
+
+    public static void setOnItemListener(OnItemListener listener) {
+        CustomAdapter.mOnItemListener = listener;
+    }
+
     @NonNull
     @Override
-    public CustomViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, final int viewType) {
+    public CustomViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, final int viewType){
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_view, parent, false);
         return new CustomViewHolder(view);
     }
@@ -33,5 +46,4 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
     public int getItemCount() {
         return movieList.size();
     }
-
 }

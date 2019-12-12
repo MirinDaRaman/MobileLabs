@@ -1,87 +1,34 @@
 package com.example.android.mobilecourse;
-
-import android.content.IntentFilter;
 import android.os.Bundle;
-import android.widget.LinearLayout;
 
-import com.google.android.material.snackbar.Snackbar;
-
-import java.util.List;
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends AppCompatActivity {
-    private CustomAdapter adapter;
-    private RecyclerView recyclerView;
-    private SwipeRefreshLayout swipeRefreshLayout;
-    private LinearLayout linearLayout;
-    public static final IntentFilter INTENT_FILTER = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initViews();
-        loadMovies();
-        registerNetworkMonitoring();
+
+        initTabFragments();
     }
 
-    private void initViews() {
-        recyclerView = findViewById(R.id.welcome_recycler_view);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        linearLayout = findViewById(R.id.linearLayout);
-        swipeRefreshLayout = findViewById(R.id.welcome_swipe_refresh);
-        setupSwipeToRefresh();
-    }
+    public void initTabFragments() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(getResources().getString(R.string.app_name));
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
+        TabItem tabMovies = findViewById(R.id.movie_tab);
+        TabItem tabTab2 = findViewById(R.id.tab_tab2);
+        TabItem tabProfile = findViewById(R.id.profile_tab);
+        ViewPager viewPager = findViewById(R.id.viewPager);
 
-    private void loadMovies() {
-        swipeRefreshLayout.setRefreshing(true);
-        final MovieApi apiService = getApplicationEx().getMovieService();
-        final Call<List<Movie>> call = apiService.getAllMovies();
-
-        call.enqueue(new Callback<List<Movie>>() {
-            @Override
-            public void onResponse(final Call<List<Movie>> call,
-                                   final Response<List<Movie>> response) {
-                setAdapter(response);
-            }
-
-            @Override
-            public void onFailure(Call<List<Movie>> call, Throwable t) {
-                Snackbar.make(linearLayout, R.string.failed, Snackbar.LENGTH_LONG).show();
-            }
-        });
-    }
-
-    private void setAdapter(Response<List<Movie>> response) {
-        adapter = new CustomAdapter(response.body());
-        recyclerView.setAdapter(adapter);
-        swipeRefreshLayout.setRefreshing(false);
-    }
-
-    private void setupSwipeToRefresh() {
-        swipeRefreshLayout.setOnRefreshListener(
-                () -> {
-                    loadMovies();
-                    swipeRefreshLayout.setRefreshing(false);
-                }
-        );
-        swipeRefreshLayout.setColorSchemeResources(R.color.primary_darker);
-    }
-
-    private void registerNetworkMonitoring() {
-        NetworkChangeReceiver receiver = new NetworkChangeReceiver(linearLayout);
-        this.registerReceiver(receiver, INTENT_FILTER);
-    }
-
-    private App getApplicationEx() {
-        return ((App) getApplication());
+        PageAdapter pageAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(pageAdapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
     }
 }
