@@ -3,12 +3,12 @@ package com.example.android.mobilecourse;
 public class Movie {
 
     private String title;
-    private Integer year;
-    private Float rating;
+    private Long year;
+    private Long rating;
     private String description;
     private String poster;
 
-    public Movie(String title, Integer year, Float rating, String description, String poster) {
+    public Movie(String title, Long year, Long rating, String description, String poster) {
         this.title = title;
         this.year = year;
         this.rating = rating;
@@ -24,11 +24,11 @@ public class Movie {
         return description;
     }
 
-    public Float getRating() {
+    public Long getRating() {
         return rating;
     }
 
-    public Integer getYear() {
+    public Long getYear() {
         return year;
     }
 
