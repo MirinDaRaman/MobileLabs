@@ -54,7 +54,6 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View profileFragment = inflater.inflate(R.layout.fragment_profile, container, false);
 
         initProfileFragmentViews(profileFragment);
@@ -81,13 +80,10 @@ public class ProfileFragment extends Fragment {
         if (requestCode == 1){
             Uri ImageData = Objects.requireNonNull(data).getData();
             ImageName.putFile(Objects.requireNonNull(ImageData))
-                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            makeText(getActivity(), R.string.img_load_succes, LENGTH_SHORT).show();
-                        }
+                    .addOnSuccessListener(taskSnapshot -> {
+                        getUserAvatar();
+                        makeText(getActivity(), R.string.img_load_succes, LENGTH_SHORT).show();
                     });
-            getUserAvatar();
         }
     }
 
@@ -100,57 +96,40 @@ public class ProfileFragment extends Fragment {
 
     private void buttonClickListenersInit() {
         userNameUpdate();
-
         userEmailUpdate();
-
         signOutButton();
-
         userPictureUpdate();
     }
 
     private void userPictureUpdate() {
-        pictureBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loadUserAvatar();
-            }
-        });
+        pictureBtn.setOnClickListener(view -> loadUserAvatar());
     }
 
     private void signOutButton() {
-        signOutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                auth.signOut();
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                startActivity(intent);
-                Objects.requireNonNull(getActivity()).overridePendingTransition(0, 0);
-            }
+        signOutBtn.setOnClickListener(view -> {
+            auth.signOut();
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
+            startActivity(intent);
+            Objects.requireNonNull(getActivity()).overridePendingTransition(0, 0);
         });
     }
 
     private void userEmailUpdate() {
-        emailSaveBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String newEmail = Objects.requireNonNull(newEmailInputEditText.getText())
-                        .toString().trim();
-                if (isNewEmailValid(newEmail)){
-                    editEmail(user, newEmail);
-                }
+        emailSaveBtn.setOnClickListener(view -> {
+            String newEmail = Objects.requireNonNull(newEmailInputEditText.getText())
+                    .toString().trim();
+            if (isNewEmailValid(newEmail)){
+                editEmail(user, newEmail);
             }
         });
     }
 
     private void userNameUpdate() {
-        usernameSaveBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String newUsername = Objects.requireNonNull(newUsernameInputEditText.getText())
-                        .toString().trim();
-                if (isNewUsernameValid(newUsername)){
-                    editUsername(user, newUsername);
-                }
+        usernameSaveBtn.setOnClickListener(view -> {
+            String newUsername = Objects.requireNonNull(newUsernameInputEditText.getText())
+                    .toString().trim();
+            if (isNewUsernameValid(newUsername)){
+                editUsername(user, newUsername);
             }
         });
     }
@@ -166,7 +145,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onSuccess(Uri uri) {
                 Picasso.get().load(uri.toString()).into(profilePicture);
-                makeText(getActivity(), uri.toString(), LENGTH_LONG).show();
+                //makeText(getActivity(), uri.toString(), LENGTH_LONG).show();
             }
         });
     }
